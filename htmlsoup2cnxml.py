@@ -110,14 +110,18 @@ def add_cnxml_title(etree_xml, new_title):
 def xsl_transform(content, bDownloadImages, base_or_source_url='.'):
    
     html_title = "Untitled"
+
     # 1 get title with readability
-    try:
-        html_title = Document(content).title()
-    except:
-        pass        
+    # ONLY MAKES SENSE FOR AN UNKNOWN HTML, SO I COMMENTED IT OUT FOR https://github.com/Connexions/rhaptos.html2cnxml
+    #try:
+    #    html_title = Document(content).title()
+    #except:
+    #    pass        
     
     # 2 use readabilty to get content
-    readable_article = Document(content).summary()
+    # ONLY MAKES SENSE FOR AN UNKNOWN HTML, SO I COMMENTED IT OUT FOR https://github.com/Connexions/rhaptos.html2cnxml
+    #readable_article = Document(content).summary()
+    readable_article = content
 
     # 3 tidy and premail
     strTidiedHtml = tidy_and_premail(readable_article)
