@@ -4,8 +4,6 @@ import os
 import urllib2
 #from urlparse import urlparse
 from urlparse import urljoin
-#import subprocess
-#from Globals import package_home
 import libxml2
 import libxslt
 from tidylib import tidy_document
@@ -110,9 +108,9 @@ def add_cnxml_title(etree_xml, new_title):
         
 # Main method. Doing all steps for the HTMLSOUP to CNXML transformation
 def xsl_transform(content, bDownloadImages, base_or_source_url='.'):
-
-    # 1 get title with readability
+   
     html_title = "Untitled"
+    # 1 get title with readability
     try:
         html_title = Document(content).title()
     except:
