@@ -1,5 +1,3 @@
-.. contents::
-
 Introduction
 ============
 Transforms HTML to CNXML.
@@ -8,14 +6,19 @@ Transforms HTML to CNXML.
 Needed libraries
 ================
 Some python libraries are needed:
+
 tidylib - http://pypi.python.org/pypi/pytidylib/0.2.1
+
 readability-lxml - http://pypi.python.org/pypi/readability-lxml/0.2.3
 
 
 How to run
 ==========
+
 python testbed_html.py
+
   -or-
+
 python testbed_html.py -noval
 
 
